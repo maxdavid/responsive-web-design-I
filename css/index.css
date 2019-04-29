@@ -222,6 +222,9 @@ header {
     width: 100%;
     padding: 0 5px;
   }
+  img {
+    overflow: hidden;
+  }
   .flex-cards-container {
     justify-content: space-around;
   }
@@ -231,6 +234,9 @@ header {
   }
   .row {
     justify-content: space-around;
+  }
+  .column {
+    padding: 0 5px;
   }
   .navlinks {
     justify-content: space-around;
@@ -252,6 +258,9 @@ header {
   .vision-card img {
     max-width: 200px;
   }
+  .cta img {
+    display: none;
+  }
 }
 
 @media all and (max-width: 500px) {
@@ -267,12 +276,19 @@ header {
     height: auto;
   }
   .navlinks a {
-    margin: 5px 0;
+    text-align: center;
+    padding: 15px 0;
+    font-size: 18px;
+    width: 100%;
+    border-bottom: 0.5px solid grey;
   }
   .row {
     flex-direction: column;
   }
   .row h5 {
     margin-top: 20px;
+  }
+  .cta {
+    margin-top: 0;
   }
 }
