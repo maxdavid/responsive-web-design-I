@@ -1,3 +1,294 @@
-/* Use your own code or past solution for Great Idea Web Page CSS here! */
+/* Set every element's box-sizing to border-box */
+* { box-sizing: border-box; }
+
+html, body {
+    min-height: 100%;
+    width: 880px;
+    margin: auto;
+    font-family: 'Titillium Web', sans-serif;
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: 'Bangers', cursive;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+}
+
+/* Your code starts here! */
 
 
+/* Site components  -------------------------- */
+h2 { 
+  font-size: 1.6rem;
+}
+
+hr {
+  border: 0.5px solid black;
+  width: 100%;
+  margin: 40px auto;
+}
+
+ul {
+  list-style-type: square;
+  list-style-position: inside;
+  padding: 0;
+}
+
+li {
+  margin: 5px 0;
+}
+
+
+/* Column styling  ---------------------------*/
+.row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.flex-cards-container {
+  display: flex;
+  justify-content: space-between;
+  align-content: space-between;
+  flex-flow: row wrap;
+}
+
+.middle-row {
+  margin: 40px 0;
+}
+
+.column {}
+
+/* header and navbar  ------------------------ */
+header {
+  padding: 30px 0;
+  width: 100%;
+}
+
+.navlinks {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: left;
+  table-layout: fixed;
+  height: 36px;
+  width: 100%;
+}
+
+.navlinks a {
+  text-decoration: none;
+  display: table-cell;
+  vertical-align: middle;
+  padding: 0;
+  font-size: 14px;
+  color: #b8b8b8;
+}
+
+.navlinks a:hover {
+  color: #999;
+}
+
+.logo {
+  width:215px;
+  text-align: right;
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.logo:hover {
+  opacity: 0.8;
+}
+
+
+/* Call To Action  ---------------------------*/
+.cta {
+  text-align: center;
+  margin: 40px 0 40px 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.site-title {
+  font-family: 'Bangers', cursive;
+  letter-spacing: 1px;
+  font-size: 85px;
+  margin: 40px 0 30px 0;
+  width: 100%;
+}
+
+.cta-button {
+  border: 1px solid black;
+  margin: auto;
+  padding: 5px 40px;
+}
+
+/* Main content  ----------------------------- */
+.site-content {
+}
+
+.site-content a {
+  text-decoration: none;
+  color: #000;
+}
+
+.site-content a:hover {
+  color: #555;
+}
+
+.full-width-img {
+  margin: 40px 0;
+}
+
+.services-header-img {
+}
+
+.services-facts {
+  display: flex;
+  justify-content: space-between;
+}
+
+.services-facts-text {
+  margin-right: 40px;
+}
+
+.services-card {
+  max-width: 420px;
+  min-height: 250px;
+  background-color: #f4f3f4;
+  border: 1px solid black;
+  padding: 20px;
+  line-height: 1.4rem;
+  margin-bottom: 40px;
+}
+
+.services-card h4 {
+  margin: 0;
+}
+
+.services-card button {
+  padding: 10px 40px;
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+
+.services-card button:hover {
+  background-color: #eee;
+}
+
+.clip-circle {
+  clip-path: circle(50% at 50% 50%);
+  max-width: 100%;
+  height: auto;
+}
+
+.vision-flex-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.vision-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #eee;
+  text-align: center;
+  margin: 0 10px;
+  padding: 20px;
+}
+
+/* footer  ----------------------------------- */
+.contact-info {
+}
+
+.contact-info p {
+  display: block;
+}
+
+.phone-number {
+  margin: 20px auto;
+}
+
+.copyright {
+  margin: 50px auto;
+  width: 100%;
+  text-align: center;
+  font-size: 12px;
+}
+
+/* media queries ----------------------------- */
+@media all and (max-width: 880px) {
+  html, body {
+    width: 100%;
+    padding: 0 5px;
+  }
+  img {
+    overflow: hidden;
+  }
+  .flex-cards-container {
+    justify-content: space-around;
+  }
+  .services-card {
+    width: 45%;
+    height: auto;
+  }
+  .row {
+    justify-content: space-around;
+  }
+  .column {
+    padding: 0 5px;
+  }
+  .navlinks {
+    justify-content: space-around;
+  }
+  .services-facts {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+  .services-facts * {
+    max-width: 420px;
+  }
+  .vision-flex-container {
+    flex-direction: column;
+  }
+  .vision-card {
+    flex-direction: row;
+    margin-bottom: 20px;
+  }
+  .vision-card img {
+    max-width: 200px;
+  }
+  .cta img {
+    display: none;
+  }
+}
+
+@media all and (max-width: 500px) {
+  .flex-cards-container {
+    flex-direction: column;
+    align-content: center;
+  }
+  .services-card {
+    width: 100%;
+  }
+  .navlinks {
+    flex-direction: column-reverse;
+    height: auto;
+  }
+  .navlinks a {
+    text-align: center;
+    padding: 15px 0;
+    font-size: 18px;
+    width: 100%;
+    border-bottom: 0.5px solid grey;
+  }
+  .row {
+    flex-direction: column;
+  }
+  .row h5 {
+    margin-top: 20px;
+  }
+  .cta {
+    margin-top: 0;
+  }
+}
